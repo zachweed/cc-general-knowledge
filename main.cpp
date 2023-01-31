@@ -1,7 +1,25 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
+
 #define NAME_SIZE 50 // a macro
+
+class LastNLines {
+    void ofFile(char* fileName) {
+        const int numberOfLines = 10;
+        ifstream file (fileName);
+        string LastLines[numberOfLines];
+        int lBound = 0;
+
+        // While we're not at end of file
+        while (file.peek() != EOF){
+            getline(file, LastLines[lBound % numberOfLines]);
+        }
+
+        cout << "I am a guy";
+    }
+};
 
 class Guy {
     int id;
@@ -17,15 +35,34 @@ public:
 
 class Interviewee : public Guy {
 
-public:
-    void aboutMe() {
-        cout << "I am an interviewee with experience in C++." << endl;
+    public:
+        void aboutMe() {
+            cout << "I am an interviewee with experience in C++." << endl;
+        }
+
+    bool giveChallenge(string s) {
+        cout << "We're giving this guy an " << s << " to work on." << endl;
+        cout << lengthOfLongestSubstring("abcabcbb");
+        true;
     }
 
-bool giveChallenge(string s) {
-    cout << "We're giving this guy an " << s << " to work on." << endl;
-    return true;
-}
+    int lengthOfLongestSubstring(string s) {
+        int string_length = (s.length() - 1);
+        int result = 0;
+
+        for(int i = 0; i < string_length; i++) {
+            int array[256] = {0};
+            for(int j = i; j < string_length; j++) {
+                if (s[j] && array[s[j]] == 1){
+                    break;
+                }
+                result = std::max(result, j-i+1);
+                array[s[j]] = 1;
+            }
+            array[s[i]] = 0;
+        }
+        return result;
+    }
 };
 
 int main() {
