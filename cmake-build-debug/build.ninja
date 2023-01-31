@@ -70,6 +70,30 @@ build CMakeFiles/untitled2.dir/LinkedListNode.cpp.o: CXX_COMPILER__untitled2_Deb
   OBJECT_DIR = CMakeFiles/untitled2.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
 
+build CMakeFiles/untitled2.dir/Interviewer.cpp.o: CXX_COMPILER__untitled2_Debug /Users/zweed/CLionProjects/cc-general/Interviewer.cpp || cmake_object_order_depends_target_untitled2
+  DEP_FILE = CMakeFiles/untitled2.dir/Interviewer.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled2.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
+
+build CMakeFiles/untitled2.dir/Interviewee.cpp.o: CXX_COMPILER__untitled2_Debug /Users/zweed/CLionProjects/cc-general/Interviewee.cpp || cmake_object_order_depends_target_untitled2
+  DEP_FILE = CMakeFiles/untitled2.dir/Interviewee.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled2.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
+
+build CMakeFiles/untitled2.dir/Person.cpp.o: CXX_COMPILER__untitled2_Debug /Users/zweed/CLionProjects/cc-general/Person.cpp || cmake_object_order_depends_target_untitled2
+  DEP_FILE = CMakeFiles/untitled2.dir/Person.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled2.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
+
+build CMakeFiles/untitled2.dir/File.cpp.o: CXX_COMPILER__untitled2_Debug /Users/zweed/CLionProjects/cc-general/File.cpp || cmake_object_order_depends_target_untitled2
+  DEP_FILE = CMakeFiles/untitled2.dir/File.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled2.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled2
@@ -78,7 +102,7 @@ build CMakeFiles/untitled2.dir/LinkedListNode.cpp.o: CXX_COMPILER__untitled2_Deb
 #############################################
 # Link the executable untitled2
 
-build untitled2: CXX_EXECUTABLE_LINKER__untitled2_Debug CMakeFiles/untitled2.dir/main.cpp.o CMakeFiles/untitled2.dir/CustomString.cpp.o CMakeFiles/untitled2.dir/LinkedList.cpp.o CMakeFiles/untitled2.dir/LinkedListNode.cpp.o
+build untitled2: CXX_EXECUTABLE_LINKER__untitled2_Debug CMakeFiles/untitled2.dir/main.cpp.o CMakeFiles/untitled2.dir/CustomString.cpp.o CMakeFiles/untitled2.dir/LinkedList.cpp.o CMakeFiles/untitled2.dir/LinkedListNode.cpp.o CMakeFiles/untitled2.dir/Interviewer.cpp.o CMakeFiles/untitled2.dir/Interviewee.cpp.o CMakeFiles/untitled2.dir/Person.cpp.o CMakeFiles/untitled2.dir/File.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6
   OBJECT_DIR = CMakeFiles/untitled2.dir
   POST_BUILD = :

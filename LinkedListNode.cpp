@@ -16,6 +16,6 @@ void LinkedListNode::setNextNode(LinkedListNode * nN) {
     nextNode = nN;
 }
 
-LinkedListNode LinkedListNode::getNextNode() {
-    return *nextNode;
+LinkedListNode * LinkedListNode::getNextNode() {
+    return &(*nextNode);
 }

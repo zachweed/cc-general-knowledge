@@ -5,10 +5,10 @@
 #include "LinkedList.h"
 #include "LinkedListNode.h"
 
-void LinkedList::setNodes(LinkedListNode * nS) {
-    LinkedListNode *nodes = nS;
+void LinkedList::setRoot(LinkedListNode * nS) {
+    LinkedListNode *root = nS;
 }
 
 const LinkedListNode LinkedList::getNodes() {
-    return (**nodes);
+    return (*root);
 }

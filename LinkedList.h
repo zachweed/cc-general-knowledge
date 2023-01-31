@@ -8,11 +8,11 @@
 #include "LinkedListNode.h"
 
 class LinkedList {
-    LinkedListNode * nodes[];
+    LinkedListNode * root;
 
     public:
 
-        void setNodes(LinkedListNode * nS);
+        void setRoot(LinkedListNode * nS);
         const LinkedListNode getNodes();
 };
 

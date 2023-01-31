@@ -14,7 +14,7 @@ class LinkedListNode {
         void setData(int d);
         int getData();
         void setNextNode(LinkedListNode * nN);
-        LinkedListNode getNextNode();
+        LinkedListNode * getNextNode();
 };
 
 
