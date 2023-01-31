@@ -42,8 +42,12 @@ class Interviewee : public Guy {
 
     bool giveChallenge(string s) {
         cout << "We're giving this guy an " << s << " to work on." << endl;
-        cout << lengthOfLongestSubstring("abcabcbb");
-        true;
+        if (lengthOfLongestSubstring("abcabcbb") != 3) {
+            throw(0);
+        } else {
+            cout << "function works as expected.";
+            return true;
+        }
     }
 
     int lengthOfLongestSubstring(string s) {
