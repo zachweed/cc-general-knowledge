@@ -1,11 +1,9 @@
 # ninja log v5
-2	673	1675189320110522741	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
-674	728	1675189320167910009	untitled2	6b051586e8b70792
-4	1277	1675190159233653645	CMakeFiles/untitled2.dir/CustomString.cpp.o	120ca6e8c91900f9
-2	1303	1675190159261799457	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
-3	949	1675190192606380801	CMakeFiles/untitled2.dir/CustomString.cpp.o	120ca6e8c91900f9
-2	991	1675190192650464225	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
-3	654	1675190227303437679	CMakeFiles/untitled2.dir/CustomString.cpp.o	120ca6e8c91900f9
-2	681	1675190227330568148	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
 2	1170	1675190377857005832	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
 1170	1267	1675190377960003884	untitled2	77a7b5e6be18b908
+3	654	1675190227303437679	CMakeFiles/untitled2.dir/CustomString.cpp.o	120ca6e8c91900f9
+5	385	1675196329520054474	CMakeFiles/untitled2.dir/LinkedListNode.cpp.o	a9c7f476c521bd9
+4	318	1675196494998084434	CMakeFiles/untitled2.dir/LinkedListNode.cpp.o	a9c7f476c521bd9
+3	547	1675197011619274614	CMakeFiles/untitled2.dir/LinkedList.cpp.o	b3060e531afa5931
+2	710	1675197052171596937	CMakeFiles/untitled2.dir/main.cpp.o	99e1fb5edc57d49f
+710	822	1675197052286991825	untitled2	a84ef7afcf9a7a26

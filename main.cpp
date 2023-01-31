@@ -1,45 +1,10 @@
 #include <iostream>
 #include "CustomString.h"
+#include "LinkedList.h"
 
 using namespace std;
 
 #define NAME_SIZE 50 // a macro
-
-class LinkedListNode {
-    public:
-        int data;
-        LinkedListNode * nextNode;
-
-        void setData(int d) {
-            data = d;
-        }
-
-        int getData() {
-            return data;
-        }
-
-        void setNextNode(LinkedListNode * nN) {
-            nextNode = nN;
-        }
-
-        LinkedListNode getNextNode() {
-            return *nextNode;
-        }
-};
-
-// An array of nodes
-class LinkedList {
-    public:
-        LinkedListNode *nodes = new LinkedListNode[3];
-
-        void setNodes(LinkedListNode * nS) {
-            nodes = nS;
-        }
-
-        LinkedListNode getNodes() {
-            return *nodes;
-        }
-};
 
 class LastNLines {
     void ofFile(char* fileName) {
