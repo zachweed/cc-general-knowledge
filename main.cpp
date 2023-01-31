@@ -5,10 +5,10 @@ using namespace std;
 
 #define NAME_SIZE 50 // a macro
 
-// Provide data; next_node
 class LinkedListNode {
     public:
         int data;
+        LinkedListNode * nextNode;
 
         void setData(int d) {
             data = d;
@@ -17,12 +17,28 @@ class LinkedListNode {
         int getData() {
             return data;
         }
+
+        void setNextNode(LinkedListNode * nN) {
+            nextNode = nN;
+        }
+
+        LinkedListNode getNextNode() {
+            return *nextNode;
+        }
 };
 
 // An array of nodes
 class LinkedList {
+    public:
+        LinkedListNode *nodes = new LinkedListNode[3];
 
+        void setNodes(LinkedListNode * nS) {
+            nodes = nS;
+        }
 
+        LinkedListNode getNodes() {
+            return *nodes;
+        }
 };
 
 class LastNLines {
@@ -63,11 +79,25 @@ class Interviewee : public Guy {
     bool giveChallenges(string s) {
         cout << "We're giving this guy an " << s << " to work on." << endl;
         LinkedListNode * node = new LinkedListNode();
+        LinkedListNode * anotherNode = new LinkedListNode();
+        LinkedListNode * aThirdNode = new LinkedListNode();
         node->setData(0);
+        anotherNode->setData(1);
+        aThirdNode->setData(2);
+        anotherNode->setNextNode(aThirdNode);
+        node->setNextNode(anotherNode);
+        LinkedList * list = new LinkedList();
+        LinkedListNode * theNodes[3] = {node, anotherNode, aThirdNode};
+        list->setNodes(*theNodes);
         if (node->getData() != 0) {
             throw(0);
         } else {
-            cout << "The linked list node is correct.\n";
+            cout << "The linked list node has the correct data.\n";
+        }
+        if (node->getNextNode().getData() != anotherNode->getData()) {
+            throw(0);
+        } else {
+            cout << "The linked list node has the correct next node.\n";
         }
         if (lengthOfLongestSubstring("abcabcbb") != 3) {
             throw(0);
