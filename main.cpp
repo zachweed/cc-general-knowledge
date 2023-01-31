@@ -5,6 +5,26 @@ using namespace std;
 
 #define NAME_SIZE 50 // a macro
 
+// Provide data; next_node
+class LinkedListNode {
+    public:
+        int data;
+
+        void setData(int d) {
+            data = d;
+        }
+
+        int getData() {
+            return data;
+        }
+};
+
+// An array of nodes
+class LinkedList {
+
+
+};
+
 class LastNLines {
     void ofFile(char* fileName) {
         const int numberOfLines = 10;
@@ -30,7 +50,7 @@ public:
         cout << "I am a guy";
     }
 
-    virtual bool giveChallenge(string s) = 0;
+    virtual bool giveChallenges(string s) = 0;
 };
 
 class Interviewee : public Guy {
@@ -40,13 +60,19 @@ class Interviewee : public Guy {
             cout << "I am an interviewee with experience in C++." << endl;
         }
 
-    bool giveChallenge(string s) {
+    bool giveChallenges(string s) {
         cout << "We're giving this guy an " << s << " to work on." << endl;
+        LinkedListNode * node = new LinkedListNode();
+        node->setData(0);
+        if (node->getData() != 0) {
+            throw(0);
+        } else {
+            cout << "The linked list node is correct.\n";
+        }
         if (lengthOfLongestSubstring("abcabcbb") != 3) {
             throw(0);
         } else {
-            cout << "function works as expected.";
-            return true;
+            cout << "The length of longest substring is correct.";
         }
     }
 
@@ -72,7 +98,7 @@ class Interviewee : public Guy {
 int main() {
     Interviewee * i = new Interviewee();
     i->aboutMe();
-    i->giveChallenge("interesting challenge");
+    i->giveChallenges("interesting challenge");
     delete i;
     Guy * g = new Interviewee();
     cout << "\n";
