@@ -1,7 +1,7 @@
 #include <iostream>
-#include <fstream>
-using namespace std;
+#include "CustomString.h"
 
+using namespace std;
 
 #define NAME_SIZE 50 // a macro
 
@@ -24,27 +24,6 @@ class LinkedListNode {
 
         LinkedListNode getNextNode() {
             return *nextNode;
-        }
-};
-
-class String {
-    public:
-        int lengthOfLongestSubstring(string s) {
-            int string_length = (s.length() - 1);
-            int result = 0;
-
-            for(int i = 0; i < string_length; i++) {
-                int array[256] = {0};
-                for(int j = i; j < string_length; j++) {
-                    if (s[j] && array[s[j]] == 1){
-                        break;
-                    }
-                    result = std::max(result, j-i+1);
-                    array[s[j]] = 1;
-                }
-                array[s[i]] = 0;
-            }
-            return result;
         }
 };
 
@@ -110,7 +89,7 @@ class Interviewee : public Guy {
         LinkedList * list = new LinkedList();
         LinkedListNode * theNodes[3] = {node, anotherNode, aThirdNode};
         list->setNodes(*theNodes);
-        String * st = new String();
+        CustomString * st = new CustomString();
         if (node->getData() != 0) {
             throw(0);
         } else {
