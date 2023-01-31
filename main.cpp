@@ -71,16 +71,12 @@ class Interviewee : public Guy {
 
 int main() {
     Interviewee * i = new Interviewee();
-    i->aboutMe(); // Create a new interviewer and print the about me.
+    i->aboutMe();
     i->giveChallenge("interesting challenge");
-    delete i; // Free memory
-    Guy * g = new Interviewee(); // Utilizing static-binding to reach through function is not virtual.
+    delete i;
+    Guy * g = new Interviewee();
     cout << "\n";
-    g->aboutMe(); // Create a new guy and print the about me.
-    delete g; // Free memory.
+    g->aboutMe();
+    delete g;
     return 0;
 }
-
-// 1. What's the typical tab size in c++?
-// 2. Private functions in c++?
-// 3. Memory allocation in C++ (remove pointers).
