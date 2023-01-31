@@ -27,6 +27,27 @@ class LinkedListNode {
         }
 };
 
+class String {
+    public:
+        int lengthOfLongestSubstring(string s) {
+            int string_length = (s.length() - 1);
+            int result = 0;
+
+            for(int i = 0; i < string_length; i++) {
+                int array[256] = {0};
+                for(int j = i; j < string_length; j++) {
+                    if (s[j] && array[s[j]] == 1){
+                        break;
+                    }
+                    result = std::max(result, j-i+1);
+                    array[s[j]] = 1;
+                }
+                array[s[i]] = 0;
+            }
+            return result;
+        }
+};
+
 // An array of nodes
 class LinkedList {
     public:
@@ -89,6 +110,7 @@ class Interviewee : public Guy {
         LinkedList * list = new LinkedList();
         LinkedListNode * theNodes[3] = {node, anotherNode, aThirdNode};
         list->setNodes(*theNodes);
+        String * st = new String();
         if (node->getData() != 0) {
             throw(0);
         } else {
@@ -99,29 +121,26 @@ class Interviewee : public Guy {
         } else {
             cout << "The linked list node has the correct next node.\n";
         }
-        if (lengthOfLongestSubstring("abcabcbb") != 3) {
+        if ((&(*theNodes)[0])->getData() != node->getData()) {
+            throw(0);
+        } else {
+            cout << "The linked list node has the correct first node.\n";
+        }
+        if ((&(*theNodes)[1])->getData() != anotherNode->getData()) {
+            throw(0);
+        } else {
+            cout << "The linked list node has the correct second node.\n";
+        }
+        if ((&(*theNodes)[2])->getData() != aThirdNode->getData()) {
+            throw(0);
+        } else {
+            cout << "The linked list node has the correct third node.\n";
+        }
+        if (st->lengthOfLongestSubstring("abcabcbb") != 3) {
             throw(0);
         } else {
             cout << "The length of longest substring is correct.";
         }
-    }
-
-    int lengthOfLongestSubstring(string s) {
-        int string_length = (s.length() - 1);
-        int result = 0;
-
-        for(int i = 0; i < string_length; i++) {
-            int array[256] = {0};
-            for(int j = i; j < string_length; j++) {
-                if (s[j] && array[s[j]] == 1){
-                    break;
-                }
-                result = std::max(result, j-i+1);
-                array[s[j]] = 1;
-            }
-            array[s[i]] = 0;
-        }
-        return result;
     }
 };
 
